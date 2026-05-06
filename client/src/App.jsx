@@ -62,9 +62,8 @@ export default function App() {
       {/* Header */}
       <header style={styles.header}>
         <div style={styles.headerLeft}>
-          <span style={styles.logo}>🍳</span>
           <div>
-            <h1 style={styles.title}>Mi recetario</h1>
+            <h1 style={styles.title}>Recetario</h1>
             <p style={styles.subtitle}>{recipes.length} recetas guardadas</p>
           </div>
         </div>
