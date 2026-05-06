@@ -4,7 +4,7 @@ import Recipe from '../models/Recipe.js'
 const router =  express.Router()
 
 router.get('/', async(req, res) => {
-  const recipes = (await Recipe.find()).sort('-createdAt')
+  let recipes = (await Recipe.find())
   res.json(recipes)
 })
 router.post('/', async(req, res) =>{

@@ -44,7 +44,7 @@ export default function App() {
       }
       closeForm()
     } catch (e) {
-      alert('Error al guardar la receta. Intenta de nuevo.')
+      alert('Error al guardar la receta. Intenta de nuevo.'+ e)
     }
   }
 
@@ -52,7 +52,7 @@ export default function App() {
     try {
       await deleteRecipe(id)
     } catch (e) {
-      alert('Error al eliminar la receta.')
+      alert('Error al eliminar la receta.' + e)
     }
   }
 
@@ -160,8 +160,8 @@ export default function App() {
             <div style={styles.modalBody}>
               <RecipeForm
                 defaultValues={editing}
-                onSubmit={handleSubmit}
-                onCancel={closeForm}
+                onSubmit={()=> handleSubmit()}
+                onCancel={()=> closeForm()}
               />
             </div>
           </div>
